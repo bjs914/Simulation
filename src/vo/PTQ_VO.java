@@ -1,6 +1,6 @@
 package vo;
 
-public class F_VO {
+public class PTQ_VO {
 	private String name;	//상품가격
 	
 	private String type1;	//상품타입1

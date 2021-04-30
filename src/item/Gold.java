@@ -1,20 +1,24 @@
 package item;
 
-import commander.KeyCommand;
-import vo.F_VO;
 
-//210330 : 이거 10개 만들것(아이템별로)
+import city.City_VO;
+import commander.KeyCommand;
+import vo.PTQ_VO;
+
 public class Gold {
-	F_VO fvo=new F_VO();
-	KeyCommand kc=new KeyCommand();
-	int fQuantity =200;	//수량은 200개로 초기값 일단 고정
+	public PTQ_VO ptqvo = new PTQ_VO();
+	public City_VO cvo = new City_VO();
 	
+	KeyCommand kc=new KeyCommand();
+	int fQuantity = 200;	//수량은 200개로 초기값 일단 고정
+	int goldPrice = 150;	//금광석 기초가격
 	
 	public void first_setting() {
-		fvo.setName("금광석");
+		ptqvo.setName("금광석");
 		
-		fvo.setType1("산지");
+		ptqvo.setType1("산지");
 		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
+		buyProcess(ptqvo.getSundan_Quantity());
 	}
 	
 	public int S_plus() {	//선단시티
@@ -44,20 +48,43 @@ public class Gold {
 	}
 	
 	public void quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
-		fvo.setGreen_Quantity(QuantityF+S_plus()-S_minus());
-		if(fvo.getGreen_Quantity()<0) {
-			fvo.setGreen_Quantity(0);
+		ptqvo.setGreen_Quantity(QuantityF+S_plus()-S_minus());
+		if(ptqvo.getGreen_Quantity()<0) {
+			ptqvo.setGreen_Quantity(0);
 		}
 		
-		fvo.setBlue_Quantity(QuantityF+G_plus()-G_minus());
-		if(fvo.getBlue_Quantity()<0) {
-			fvo.setBlue_Quantity(0);
+		ptqvo.setBlue_Quantity(QuantityF+G_plus()-G_minus());
+		if(ptqvo.getBlue_Quantity()<0) {
+			ptqvo.setBlue_Quantity(0);
 		}
 		
-		fvo.setSundan_Quantity(QuantityF+B_plus()-B_minus());
-		if(fvo.getSundan_Quantity()<0) {
-			fvo.setSundan_Quantity(0);
+		ptqvo.setSundan_Quantity(QuantityF+B_plus()-B_minus());
+		if(ptqvo.getSundan_Quantity()<0) {
+			ptqvo.setSundan_Quantity(0);
 		}
-		
+	}
+	
+	public void buyProcess(int quantity) {
+		if(quantity<=140) {
+			cvo.setPrice(goldPrice*((1-30/100)));
+		}
+		else if(quantity>140 || quantity<=160) {
+			cvo.setPrice(goldPrice*((1-20/100)));
+		}
+		else if(quantity>160 || quantity<=180) {
+			cvo.setPrice(goldPrice*((1-10/100)));
+		}
+		else if(quantity>180 || quantity<=220) {
+			cvo.setPrice(goldPrice);
+		}
+		else if(quantity>220 || quantity<=240) {
+			cvo.setPrice(goldPrice*((1+10/100)));
+		}
+		else if(quantity>240 || quantity<=260) {
+			cvo.setPrice(goldPrice*((1+20/100)));
+		}
+		else {
+			cvo.setPrice(goldPrice*((1+30/100)));
+		}
 	}
 }

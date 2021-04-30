@@ -4,7 +4,7 @@ import city.CityList;
 
 
 public class ItemGate {
-	F_VO fvo=new F_VO();
+	PTQ_VO fvo=new PTQ_VO();
 CityList cl =new CityList();
 	
 	

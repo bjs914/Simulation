@@ -21,7 +21,7 @@ public class Sundan {
 	}
 
 	public void buyprice() {
-		beef.buyProcess(beef.fvo.getSundan_Quantity());	//이거 열개들어와야함
+		beef.buyProcess(beef.ptqvo.getSundan_Quantity());	//이거 열개들어와야함
 	}
 	
 	
@@ -39,10 +39,10 @@ public class Sundan {
 	
 	public void beef_list() {//10개만들기
 		
-		city.setName(beef.fvo.getName());
+		city.setName(beef.ptqvo.getName());
 		city.setPrice(beef.cvo.getPrice());
 		city.setSale(beef.cvo.getSale());
-		city.setQuantity(beef.fvo.getSundan_Quantity());
+		city.setQuantity(beef.ptqvo.getSundan_Quantity());
 		//리스트화 지정 전 세팅
 		
 		alist.add(city);
