@@ -11,14 +11,13 @@ public class Octopus {
 	
 	KeyCommand kc=new KeyCommand();
 	int fQuantity =200;	//수량은 200개로 초기값 일단 고정
-	int octoPrice = 110;
+	double octoPrice = 110.0;
 	
 	public void first_setting() {
 		ptqvo.setName("문어");
 		
 		ptqvo.setType1("바다");
 		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
-		buyProcess(ptqvo.getBlue_Quantity());
 	}
 	
 	public int S_plus() {	//선단시티
@@ -68,19 +67,19 @@ public class Octopus {
 		if(quantity<=140) {
 			cvo.setPrice(octoPrice*((1-30/100)));
 		}
-		else if(quantity>140 || quantity<=160) {
+		else if(quantity>140 && quantity<=160) {
 			cvo.setPrice(octoPrice*((1-20/100)));
 		}
-		else if(quantity>160 || quantity<=180) {
+		else if(quantity>160 && quantity<=180) {
 			cvo.setPrice(octoPrice*((1-10/100)));
 		}
-		else if(quantity>180 || quantity<=220) {
+		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(octoPrice);
 		}
-		else if(quantity>220 || quantity<=240) {
+		else if(quantity>220 && quantity<=240) {
 			cvo.setPrice(octoPrice*((1+10/100)));
 		}
-		else if(quantity>240 || quantity<=260) {
+		else if(quantity>240 && quantity<=260) {
 			cvo.setPrice(octoPrice*((1+20/100)));
 		}
 		else {

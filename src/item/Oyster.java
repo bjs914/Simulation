@@ -10,14 +10,13 @@ public class Oyster {
 	
 	KeyCommand kc=new KeyCommand();
 	int fQuantity =200;	//수량은 200개로 초기값 일단 고정
-	int oysterPrice = 90;//굴 기초가격
+	double oysterPrice = 90.0;//굴 기초가격
 	
 	public void first_setting() {
 		ptqvo.setName("굴");
 		
 		ptqvo.setType1("바다");
 		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
-		buyProcess(ptqvo.getBlue_Quantity());
 	}
 	
 	public int S_plus() {	//선단시티
@@ -67,19 +66,19 @@ public class Oyster {
 		if(quantity<=140) {
 			cvo.setPrice(oysterPrice*((1-30/100)));
 		}
-		else if(quantity>140 || quantity<=160) {
+		else if(quantity>140 && quantity<=160) {
 			cvo.setPrice(oysterPrice*((1-20/100)));
 		}
-		else if(quantity>160 || quantity<=180) {
+		else if(quantity>160 && quantity<=180) {
 			cvo.setPrice(oysterPrice*((1-10/100)));
 		}
-		else if(quantity>180 || quantity<=220) {
+		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(oysterPrice);
 		}
-		else if(quantity>220 || quantity<=240) {
+		else if(quantity>220 && quantity<=240) {
 			cvo.setPrice(oysterPrice*((1+10/100)));
 		}
-		else if(quantity>240 || quantity<=260) {
+		else if(quantity>240 && quantity<=260) {
 			cvo.setPrice(oysterPrice*((1+20/100)));
 		}
 		else {

@@ -7,8 +7,8 @@ public class TestMain {
 
 	public static void main(String[] args) {
 		KeyCommand kc = new KeyCommand();
-		ItemGate ig = new ItemGate();
-		ig.start();
+		ItemGate itemGate = new ItemGate();
+		itemGate.start();
 		//무한 반복시작
 		while(true) {
 		System.out.println("도시 이름 : "+"\t"+"날짜 : ");
@@ -23,7 +23,7 @@ public class TestMain {
 		int con=kc.sc.nextInt();
 		
 		if(con==1) {	//상품구입
-			ig.numberOne();
+			itemGate.numberOne();
 		}//상품구입종료
 		else if(con==2) {	//상품판매
 			

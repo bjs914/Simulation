@@ -16,11 +16,13 @@ import item.Salt;
 
 public class Sundan {
 	public City_VO city= new City_VO();
+	public ListCollection listC = new ListCollection();
+	
 	Beef beef = new Beef();
 	Egg egg = new Egg();
 	Gold gold = new Gold();
 	Iron iron = new Iron();
-	Mushroom mushroom = new Mushroom();
+	public Mushroom mushroom = new Mushroom();
 	Octopus octopus = new Octopus();
 	Oyster oyster = new Oyster();
 	Rice rice = new Rice();
@@ -44,12 +46,14 @@ public class Sundan {
 		oyster.first_setting();
 		rice.first_setting();
 		salmon.first_setting();
-		salt.first_setting();		
+		salt.first_setting();	
+		buyprice();
+		buyList();
 	}
 
 	public void buyprice() {
-		beef.buyProcess(beef.ptqvo.getGreen_Quantity());	//이거 열개들어와야함
-		egg.buyProcess(egg.ptqvo.getGreen_Quantity());
+		beef.buyProcess(beef.ptqvo.getSundan_Quantity());	//이거 열개들어와야함
+		egg.buyProcess(egg.ptqvo.getSundan_Quantity());
 		gold.buyProcess(gold.ptqvo.getSundan_Quantity());
 		iron.buyProcess(iron.ptqvo.getSundan_Quantity());
 		mushroom.buyProcess(mushroom.ptqvo.getSundan_Quantity());
@@ -82,101 +86,102 @@ public class Sundan {
 	
 	
 	public void beef_list() {//10개만들기	
-		city.setName(beef.ptqvo.getName());
-		city.setPrice(beef.cvo.getPrice());
-		city.setSale(beef.cvo.getSale());
-		city.setQuantity(beef.ptqvo.getSundan_Quantity());
-		//리스트화 지정 전 세팅	
-		alist.add(city);	
+		listC.item_name.add(beef.ptqvo.getName());
+		listC.quantity_collect.add(beef.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(beef.cvo.getPrice());
+		listC.item_type1.add(beef.ptqvo.getType1());
+		listC.item_type2.add(beef.ptqvo.getType2());
+		listC.item_type3.add(beef.ptqvo.getType3());
+		//리스트화 지정 전 세팅		
 	}
 	
 	public void egg_list() {
-		city.setName(egg.ptqvo.getName());
-		city.setPrice(egg.cvo.getPrice());
-		city.setPrice(egg.cvo.getPrice());
-		city.setSale(egg.cvo.getSale());
-		city.setQuantity(egg.ptqvo.getSundan_Quantity());
+		listC.item_name.add(egg.ptqvo.getName());
+		listC.quantity_collect.add(egg.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(egg.cvo.getPrice());
+		listC.item_type1.add(egg.ptqvo.getType1());
+		listC.item_type2.add(egg.ptqvo.getType2());
+		listC.item_type3.add(egg.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void gold_list() {
-		city.setName(gold.ptqvo.getName());
-		city.setPrice(gold.cvo.getPrice());
-		city.setPrice(gold.cvo.getPrice());
-		city.setSale(gold.cvo.getSale());
-		city.setQuantity(gold.ptqvo.getSundan_Quantity());
+		listC.item_name.add(gold.ptqvo.getName());
+		listC.quantity_collect.add(gold.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(gold.cvo.getPrice());
+		listC.item_type1.add(gold.ptqvo.getType1());
+		listC.item_type2.add(gold.ptqvo.getType2());
+		listC.item_type3.add(gold.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void iron_list() {
-		city.setName(iron.ptqvo.getName());
-		city.setPrice(iron.cvo.getPrice());
-		city.setPrice(iron.cvo.getPrice());
-		city.setSale(iron.cvo.getSale());
-		city.setQuantity(iron.ptqvo.getSundan_Quantity());
+		listC.item_name.add(iron.ptqvo.getName());
+		listC.quantity_collect.add(iron.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(iron.cvo.getPrice());
+		listC.item_type1.add(iron.ptqvo.getType1());
+		listC.item_type2.add(iron.ptqvo.getType2());
+		listC.item_type3.add(iron.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void mushroom_list() {
-		city.setName(mushroom.ptqvo.getName());
-		city.setPrice(mushroom.cvo.getPrice());
-		city.setPrice(mushroom.cvo.getPrice());
-		city.setSale(mushroom.cvo.getSale());
-		city.setQuantity(mushroom.ptqvo.getSundan_Quantity());
+		listC.item_name.add(mushroom.ptqvo.getName());
+		listC.quantity_collect.add(mushroom.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(mushroom.cvo.getPrice());
+		listC.item_type1.add(mushroom.ptqvo.getType1());
+		listC.item_type2.add(mushroom.ptqvo.getType2());
+		listC.item_type3.add(mushroom.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void octopus_list() {
-		city.setName(octopus.ptqvo.getName());
-		city.setPrice(octopus.cvo.getPrice());
-		city.setPrice(octopus.cvo.getPrice());
-		city.setSale(octopus.cvo.getSale());
-		city.setQuantity(octopus.ptqvo.getSundan_Quantity());
+		listC.item_name.add(octopus.ptqvo.getName());
+		listC.quantity_collect.add(octopus.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(octopus.cvo.getPrice());
+		listC.item_type1.add(octopus.ptqvo.getType1());
+		listC.item_type2.add(octopus.ptqvo.getType2());
+		listC.item_type3.add(octopus.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void oyster_list() {
-		city.setName(oyster.ptqvo.getName());
-		city.setPrice(oyster.cvo.getPrice());
-		city.setPrice(oyster.cvo.getPrice());
-		city.setSale(oyster.cvo.getSale());
-		city.setQuantity(oyster.ptqvo.getSundan_Quantity());
+		listC.item_name.add(oyster.ptqvo.getName());
+		listC.quantity_collect.add(oyster.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(oyster.cvo.getPrice());
+		listC.item_type1.add(oyster.ptqvo.getType1());
+		listC.item_type2.add(oyster.ptqvo.getType2());
+		listC.item_type3.add(oyster.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void rice_list() {
-		city.setName(rice.ptqvo.getName());
-		city.setPrice(rice.cvo.getPrice());
-		city.setPrice(rice.cvo.getPrice());
-		city.setSale(rice.cvo.getSale());
-		city.setQuantity(rice.ptqvo.getSundan_Quantity());
+		listC.item_name.add(rice.ptqvo.getName());
+		listC.quantity_collect.add(rice.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(rice.cvo.getPrice());
+		listC.item_type1.add(rice.ptqvo.getType1());
+		listC.item_type2.add(rice.ptqvo.getType2());
+		listC.item_type3.add(rice.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void salmon_list() {
-		city.setName(salmon.ptqvo.getName());
-		city.setPrice(salmon.cvo.getPrice());
-		city.setPrice(salmon.cvo.getPrice());
-		city.setSale(salmon.cvo.getSale());
-		city.setQuantity(salmon.ptqvo.getSundan_Quantity());
+		listC.item_name.add(salmon.ptqvo.getName());
+		listC.quantity_collect.add(salmon.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(salmon.cvo.getPrice());
+		listC.item_type1.add(salmon.ptqvo.getType1());
+		listC.item_type2.add(salmon.ptqvo.getType2());
+		listC.item_type3.add(salmon.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 	
 	public void salt_list() {
-		city.setName(salt.ptqvo.getName());
-		city.setPrice(salt.cvo.getPrice());
-		city.setPrice(salt.cvo.getPrice());
-		city.setSale(salt.cvo.getSale());
-		city.setQuantity(salt.ptqvo.getSundan_Quantity());
+		listC.item_name.add(salt.ptqvo.getName());
+		listC.quantity_collect.add(salt.ptqvo.getBlue_Quantity());
+		listC.price_collect.add(salt.cvo.getPrice());
+		listC.item_type1.add(salt.ptqvo.getType1());
+		listC.item_type2.add(salt.ptqvo.getType2());
+		listC.item_type3.add(salt.ptqvo.getType3());
 		//리스트화 지정 전 세팅
-		alist.add(city);
 	}
 }

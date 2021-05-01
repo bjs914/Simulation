@@ -4,39 +4,32 @@ import city.CityList;
 
 
 public class ItemGate {
-	PTQ_VO fvo=new PTQ_VO();
-CityList cl =new CityList();
-	
-	
+	PTQ_VO ftqvo=new PTQ_VO();
+	CityList cityList =new CityList();
 	
 	
 	public void start() {	//최초 한번실행
-		cl.fisrtStart();
-		cl.cityList();
+		cityList.fisrtStart();
 	}
-	
-
-
 
 
 	public void numberOne() {
-	
-		for(int i=0;i<cl.sd.alist.size();i++) {
-			System.out.println(cl.sd.alist.get(i).getCity_name());
+		System.out.println("상품명\t판매가격\t판매수량\t도시타입\t도시타입\t도시타입");
 
-			System.out.println(cl.sd.alist.get(i).getCity_type());
+		for(int i=0;i<cityList.sundan.listC.item_name.size();i++) {
+			System.out.print(cityList.sundan.listC.item_name.get(i)+"\t");
+
+			System.out.print(Math.round(cityList.sundan.listC.price_collect.get(i))+"\t");
 			
-			System.out.println(cl.sd.alist.get(i).getName());
+			System.out.print(cityList.sundan.listC.quantity_collect.get(i)+"\t");
 
-			System.out.println(cl.sd.alist.get(i).getPrice());
-
-			System.out.println(cl.sd.alist.get(i).getSale());
-
-			System.out.println(cl.sd.alist.get(i).getQuantity());
+			System.out.print(cityList.sundan.listC.item_type1.get(i)+"\t");
+			
+			System.out.print(cityList.sundan.listC.item_type2.get(i)+"\t");
+			
+			System.out.println(cityList.sundan.listC.item_type3.get(i)+"\t");
 		}
-
-
-		}
+	}
 	
 	
 	public void numberTwo() {

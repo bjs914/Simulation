@@ -11,7 +11,7 @@ public class Mushroom {
 	
 	KeyCommand kc=new KeyCommand();
 	int fQuantity = 200;	//수량은 200개로 초기값 일단 고정
-	int mushPrice = 80;
+	double mushPrice = 80.0;
 	
 	public void first_setting() {
 		ptqvo.setName("버섯");
@@ -68,19 +68,19 @@ public class Mushroom {
 		if(quantity<=140) {
 			cvo.setPrice(mushPrice*((1-30/100)));
 		}
-		else if(quantity>140 || quantity<=160) {
+		else if(quantity>140 && quantity<=160) {
 			cvo.setPrice(mushPrice*((1-20/100)));
 		}
-		else if(quantity>160 || quantity<=180) {
+		else if(quantity>160 && quantity<=180) {
 			cvo.setPrice(mushPrice*((1-10/100)));
 		}
-		else if(quantity>180 || quantity<=220) {
+		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(mushPrice);
 		}
-		else if(quantity>220 || quantity<=240) {
+		else if(quantity>220 && quantity<=240) {
 			cvo.setPrice(mushPrice*((1+10/100)));
 		}
-		else if(quantity>240 || quantity<=260) {
+		else if(quantity>240 && quantity<=260) {
 			cvo.setPrice(mushPrice*((1+20/100)));
 		}
 		else {

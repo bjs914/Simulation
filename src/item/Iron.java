@@ -11,14 +11,13 @@ public class Iron {
 	
 	KeyCommand kc=new KeyCommand();
 	int fQuantity =200;	//수량은 200개로 초기값 일단 고정
-	int ironPrice = 130;	//철광석 기초수량
+	double ironPrice = 130.0;	//철광석 기초수량
 	
 	public void first_setting() {
 		ptqvo.setName("철광석");
 		
 		ptqvo.setType1("산지");
 		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
-		buyProcess(ptqvo.getSundan_Quantity());
 	}
 	
 	public int S_plus() {	//선단시티
@@ -68,19 +67,19 @@ public class Iron {
 		if(quantity<=140) {
 			cvo.setPrice(ironPrice*((1-30/100)));
 		}
-		else if(quantity>140 || quantity<=160) {
+		else if(quantity>140 && quantity<=160) {
 			cvo.setPrice(ironPrice*((1-20/100)));
 		}
-		else if(quantity>160 || quantity<=180) {
+		else if(quantity>160 && quantity<=180) {
 			cvo.setPrice(ironPrice*((1-10/100)));
 		}
-		else if(quantity>180 || quantity<=220) {
+		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(ironPrice);
 		}
-		else if(quantity>220 || quantity<=240) {
+		else if(quantity>220 && quantity<=240) {
 			cvo.setPrice(ironPrice*((1+10/100)));
 		}
-		else if(quantity>240 || quantity<=260) {
+		else if(quantity>240 && quantity<=260) {
 			cvo.setPrice(ironPrice*((1+20/100)));
 		}
 		else {

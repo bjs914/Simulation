@@ -3,18 +3,18 @@ package city;
 
 
 public class CityList {
-	public Sundan sd = new Sundan();
-	Blue bl = new Blue();
-	Green gr = new Green();
+	public Sundan sundan = new Sundan();
+	public Blue blue = new Blue();
+	public Green green = new Green();
 	
 	
 	public void fisrtStart() {//최초 하넙ㄴ
-		sd.firstStart();
-//		bl.firstStart();
-//		gr.firstStart();
+		sundan.firstStart();
+//		blue.firstStart();
+//		green.firstStart();
 	}
 	
 	public void cityList() {
-		sd.buyList();
+		sundan.buyList();
 	}
 }

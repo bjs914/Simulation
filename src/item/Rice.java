@@ -10,7 +10,7 @@ public class Rice {
 	
 	KeyCommand kc=new KeyCommand();
 	int fQuantity =200;	//수량은 200개로 초기값 일단 고정
-	int ricePrice = 50;
+	double ricePrice = 50.0;
 	
 	public void first_setting() {
 		ptqvo.setName("쌀");
@@ -68,19 +68,19 @@ public class Rice {
 		if(quantity<=140) {
 			cvo.setPrice(ricePrice*((1-30/100)));
 		}
-		else if(quantity>140 || quantity<=160) {
+		else if(quantity>140 && quantity<=160) {
 			cvo.setPrice(ricePrice*((1-20/100)));
 		}
-		else if(quantity>160 || quantity<=180) {
+		else if(quantity>160 && quantity<=180) {
 			cvo.setPrice(ricePrice*((1-10/100)));
 		}
-		else if(quantity>180 || quantity<=220) {
+		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(ricePrice);
 		}
-		else if(quantity>220 || quantity<=240) {
+		else if(quantity>220 && quantity<=240) {
 			cvo.setPrice(ricePrice*((1+10/100)));
 		}
-		else if(quantity>240 || quantity<=260) {
+		else if(quantity>240 && quantity<=260) {
 			cvo.setPrice(ricePrice*((1+20/100)));
 		}
 		else {

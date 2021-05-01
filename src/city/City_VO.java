@@ -4,7 +4,7 @@ public class City_VO {
 	private String city_name;
 	private String city_type;
 	private String name; //상품 이름
-	private int price;	//구입가격
+	private double price;	//구입가격
 	private int quantity;	//최종수량이자 변동되는 수량들을 의미함
 	private int sale;	//판매가격
 	
@@ -34,11 +34,11 @@ public class City_VO {
 		this.city_type = city_type;
 	}
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
