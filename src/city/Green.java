@@ -28,11 +28,8 @@ public class Green {
 	Salmon salmon = new Salmon();
 	Salt salt = new Salt();
 	
-	
 	public ArrayList<City_VO> alist = new ArrayList<City_VO>();
-	
-	
-	
+		
 	public void firstStart() {	//도시타입,도시이름 설정
 		city.setCity_name("그린시티");
 		city.setCity_type("농지");
@@ -64,6 +61,50 @@ public class Green {
 		salt.buyProcess(salt.ptqvo.getGreen_Quantity());
 	}
 	
+	public void firstQuantity() {//210501 추가 및 수정
+		beef.green_quantity(beef.fQuantity);
+		egg.green_quantity(egg.fQuantity);
+		gold.green_quantity(gold.fQuantity);
+		iron.green_quantity(iron.fQuantity);
+		mushroom.green_quantity(mushroom.fQuantity);
+		octopus.green_quantity(octopus.fQuantity);
+		oyster.green_quantity(oyster.fQuantity);
+		rice.green_quantity(rice.fQuantity);
+		salmon.green_quantity(salmon.fQuantity);
+		salt.green_quantity(salt.fQuantity);
+	}
+	
+	public void buyQuantity() {
+		int bnum = listC.item_name.indexOf(beef.ptqvo.getName());
+		beef.green_quantity(bnum);	//210501 수정 하는중
+		
+		int egnum = listC.item_name.indexOf(egg.ptqvo.getName());
+		egg.green_quantity(egnum);
+		
+		int gnum = listC.item_name.indexOf(gold.ptqvo.getName());
+		gold.green_quantity(gnum);
+		
+		int inum = listC.item_name.indexOf(iron.ptqvo.getName());
+		iron.green_quantity(inum);
+		
+		int mnum = listC.item_name.indexOf(mushroom.ptqvo.getName());
+		mushroom.green_quantity(mnum);
+		
+		int ocnum = listC.item_name.indexOf(octopus.ptqvo.getName());
+		octopus.green_quantity(ocnum);
+		
+		int oynum = listC.item_name.indexOf(oyster.ptqvo.getName());
+		oyster.green_quantity(oynum);
+		
+		int rnum = listC.item_name.indexOf(rice.ptqvo.getName());
+		rice.green_quantity(rnum);
+		
+		int smnum= listC.item_name.indexOf(salmon.ptqvo.getName());
+		salmon.green_quantity(smnum);
+		
+		int stnum = listC.item_name.indexOf(salt.ptqvo.getName());
+		salt.green_quantity(stnum);
+	}
 	
 	
 	public void buySale() {	//판매관련

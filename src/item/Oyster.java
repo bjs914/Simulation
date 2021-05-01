@@ -9,7 +9,7 @@ public class Oyster {
 	public City_VO cvo = new City_VO();
 	
 	KeyCommand kc=new KeyCommand();
-	int fQuantity =200;	//수량은 200개로 초기값 일단 고정
+	public int fQuantity =200;	//수량은 200개로 초기값 일단 고정
 	double oysterPrice = 90.0;//굴 기초가격
 	
 	public void first_setting() {

@@ -10,7 +10,7 @@ public class Gold {
 	public City_VO cvo = new City_VO();
 	
 	KeyCommand kc=new KeyCommand();
-	int fQuantity = 200;	//수량은 200개로 초기값 일단 고정
+	public int fQuantity = 200;	//수량은 200개로 초기값 일단 고정
 	double goldPrice = 150.0;	//금광석 기초가격
 	
 	public void first_setting() {

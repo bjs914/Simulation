@@ -61,9 +61,49 @@ public class Sundan {
 		salt.buyProcess(salt.ptqvo.getSundan_Quantity());
 	}
 	
+	public void firstQuantity() {//210501 추가 및 수정
+		beef.sundan_quantity(beef.fQuantity);
+		egg.sundan_quantity(egg.fQuantity);
+		gold.sundan_quantity(gold.fQuantity);
+		iron.sundan_quantity(iron.fQuantity);
+		mushroom.sundan_quantity(mushroom.fQuantity);
+		octopus.sundan_quantity(octopus.fQuantity);
+		oyster.sundan_quantity(oyster.fQuantity);
+		rice.sundan_quantity(rice.fQuantity);
+		salmon.sundan_quantity(salmon.fQuantity);
+		salt.sundan_quantity(salt.fQuantity);
+	}
+	
 	public void buyQuantity() {
-		int num = listC.item_name.indexOf(beef.ptqvo.getName());
+		int bnum = listC.item_name.indexOf(beef.ptqvo.getName());
+		beef.sundan_quantity(bnum);	//210501 수정 하는중
 		
+		int egnum = listC.item_name.indexOf(egg.ptqvo.getName());
+		egg.sundan_quantity(egnum);
+		
+		int gnum = listC.item_name.indexOf(gold.ptqvo.getName());
+		gold.sundan_quantity(gnum);
+		
+		int inum = listC.item_name.indexOf(iron.ptqvo.getName());
+		iron.sundan_quantity(inum);
+		
+		int mnum = listC.item_name.indexOf(mushroom.ptqvo.getName());
+		mushroom.sundan_quantity(mnum);
+		
+		int ocnum = listC.item_name.indexOf(octopus.ptqvo.getName());
+		octopus.sundan_quantity(ocnum);
+		
+		int oynum = listC.item_name.indexOf(oyster.ptqvo.getName());
+		oyster.sundan_quantity(oynum);
+		
+		int rnum = listC.item_name.indexOf(rice.ptqvo.getName());
+		rice.sundan_quantity(rnum);
+		
+		int smnum= listC.item_name.indexOf(salmon.ptqvo.getName());
+		salmon.sundan_quantity(smnum);
+		
+		int stnum = listC.item_name.indexOf(salt.ptqvo.getName());
+		salt.sundan_quantity(stnum);
 	}
 	
 	
