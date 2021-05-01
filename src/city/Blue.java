@@ -14,6 +14,7 @@ import item.Salt;
 public class Blue {
 	public City_VO city= new City_VO();
 	public ListCollection listC = new ListCollection();
+	
 	Beef beef = new Beef();
 	Egg egg = new Egg();
 	Gold gold = new Gold();
@@ -38,7 +39,9 @@ public class Blue {
 		oyster.first_setting();
 		rice.first_setting();
 		salmon.first_setting();
-		salt.first_setting();		
+		salt.first_setting();	
+		buyprice();
+		buyList();
 	}
 
 	public void buyprice() {
@@ -74,7 +77,7 @@ public class Blue {
 	}
 	
 	
-	
+	//상품 리스트 시작
 	public void beef_list() {//10개만들기	
 		listC.item_name.add(beef.ptqvo.getName());
 		listC.quantity_collect.add(beef.ptqvo.getBlue_Quantity());

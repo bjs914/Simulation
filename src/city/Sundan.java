@@ -13,7 +13,6 @@ import item.Rice;
 import item.Salmon;
 import item.Salt;
 
-
 public class Sundan {
 	public City_VO city= new City_VO();
 	public ListCollection listC = new ListCollection();
@@ -22,7 +21,7 @@ public class Sundan {
 	Egg egg = new Egg();
 	Gold gold = new Gold();
 	Iron iron = new Iron();
-	public Mushroom mushroom = new Mushroom();
+	Mushroom mushroom = new Mushroom();
 	Octopus octopus = new Octopus();
 	Oyster oyster = new Oyster();
 	Rice rice = new Rice();
@@ -31,8 +30,6 @@ public class Sundan {
 	
 	
 	public ArrayList<City_VO> alist = new ArrayList<City_VO>();
-	
-	
 	
 	public void firstStart() {	//도시타입,도시이름 설정
 		city.setCity_name("선단시티");
@@ -64,6 +61,10 @@ public class Sundan {
 		salt.buyProcess(salt.ptqvo.getSundan_Quantity());
 	}
 	
+	public void buyQuantity() {
+		int num = listC.item_name.indexOf(beef.ptqvo.getName());
+		
+	}
 	
 	
 	public void buySale() {	//판매관련
@@ -87,7 +88,7 @@ public class Sundan {
 	
 	public void beef_list() {//10개만들기	
 		listC.item_name.add(beef.ptqvo.getName());
-		listC.quantity_collect.add(beef.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(beef.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(beef.cvo.getPrice());
 		listC.item_type1.add(beef.ptqvo.getType1());
 		listC.item_type2.add(beef.ptqvo.getType2());
@@ -97,7 +98,7 @@ public class Sundan {
 	
 	public void egg_list() {
 		listC.item_name.add(egg.ptqvo.getName());
-		listC.quantity_collect.add(egg.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(egg.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(egg.cvo.getPrice());
 		listC.item_type1.add(egg.ptqvo.getType1());
 		listC.item_type2.add(egg.ptqvo.getType2());
@@ -107,7 +108,7 @@ public class Sundan {
 	
 	public void gold_list() {
 		listC.item_name.add(gold.ptqvo.getName());
-		listC.quantity_collect.add(gold.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(gold.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(gold.cvo.getPrice());
 		listC.item_type1.add(gold.ptqvo.getType1());
 		listC.item_type2.add(gold.ptqvo.getType2());
@@ -117,7 +118,7 @@ public class Sundan {
 	
 	public void iron_list() {
 		listC.item_name.add(iron.ptqvo.getName());
-		listC.quantity_collect.add(iron.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(iron.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(iron.cvo.getPrice());
 		listC.item_type1.add(iron.ptqvo.getType1());
 		listC.item_type2.add(iron.ptqvo.getType2());
@@ -127,7 +128,7 @@ public class Sundan {
 	
 	public void mushroom_list() {
 		listC.item_name.add(mushroom.ptqvo.getName());
-		listC.quantity_collect.add(mushroom.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(mushroom.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(mushroom.cvo.getPrice());
 		listC.item_type1.add(mushroom.ptqvo.getType1());
 		listC.item_type2.add(mushroom.ptqvo.getType2());
@@ -137,7 +138,7 @@ public class Sundan {
 	
 	public void octopus_list() {
 		listC.item_name.add(octopus.ptqvo.getName());
-		listC.quantity_collect.add(octopus.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(octopus.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(octopus.cvo.getPrice());
 		listC.item_type1.add(octopus.ptqvo.getType1());
 		listC.item_type2.add(octopus.ptqvo.getType2());
@@ -147,7 +148,7 @@ public class Sundan {
 	
 	public void oyster_list() {
 		listC.item_name.add(oyster.ptqvo.getName());
-		listC.quantity_collect.add(oyster.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(oyster.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(oyster.cvo.getPrice());
 		listC.item_type1.add(oyster.ptqvo.getType1());
 		listC.item_type2.add(oyster.ptqvo.getType2());
@@ -157,7 +158,7 @@ public class Sundan {
 	
 	public void rice_list() {
 		listC.item_name.add(rice.ptqvo.getName());
-		listC.quantity_collect.add(rice.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(rice.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(rice.cvo.getPrice());
 		listC.item_type1.add(rice.ptqvo.getType1());
 		listC.item_type2.add(rice.ptqvo.getType2());
@@ -167,7 +168,7 @@ public class Sundan {
 	
 	public void salmon_list() {
 		listC.item_name.add(salmon.ptqvo.getName());
-		listC.quantity_collect.add(salmon.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(salmon.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(salmon.cvo.getPrice());
 		listC.item_type1.add(salmon.ptqvo.getType1());
 		listC.item_type2.add(salmon.ptqvo.getType2());
@@ -177,7 +178,7 @@ public class Sundan {
 	
 	public void salt_list() {
 		listC.item_name.add(salt.ptqvo.getName());
-		listC.quantity_collect.add(salt.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(salt.ptqvo.getSundan_Quantity());
 		listC.price_collect.add(salt.cvo.getPrice());
 		listC.item_type1.add(salt.ptqvo.getType1());
 		listC.item_type2.add(salt.ptqvo.getType2());

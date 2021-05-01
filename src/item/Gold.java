@@ -17,7 +17,7 @@ public class Gold {
 		ptqvo.setName("금광석");
 		
 		ptqvo.setType1("산지");
-		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
+		sundan_quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
 	}
 	
 	public int S_plus() {	//선단시티
@@ -46,7 +46,44 @@ public class Gold {
 		return quantyty;
 	}
 	
-	public void quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+	public void sundan_quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+
+		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
+		if(ptqvo.getGreen_Quantity()<0) {
+			ptqvo.setGreen_Quantity(0);
+		}
+		
+		ptqvo.setBlue_Quantity(QuantityF+B_plus()-B_minus());
+		if(ptqvo.getBlue_Quantity()<0) {
+			ptqvo.setBlue_Quantity(0);
+		}
+		
+		ptqvo.setSundan_Quantity(QuantityF+S_plus()-S_minus());
+		if(ptqvo.getSundan_Quantity()<0) {
+			ptqvo.setSundan_Quantity(0);
+		}
+	}
+	
+	public void green_quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+
+		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
+		if(ptqvo.getGreen_Quantity()<0) {
+			ptqvo.setGreen_Quantity(0);
+		}
+		
+		ptqvo.setBlue_Quantity(QuantityF+B_plus()-B_minus());
+		if(ptqvo.getBlue_Quantity()<0) {
+			ptqvo.setBlue_Quantity(0);
+		}
+		
+		ptqvo.setSundan_Quantity(QuantityF+S_plus()-S_minus());
+		if(ptqvo.getSundan_Quantity()<0) {
+			ptqvo.setSundan_Quantity(0);
+		}
+	}
+	
+	public void blue_quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+
 		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
 		if(ptqvo.getGreen_Quantity()<0) {
 			ptqvo.setGreen_Quantity(0);

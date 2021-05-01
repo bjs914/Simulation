@@ -1,6 +1,7 @@
 package main;
 
 import commander.KeyCommand;
+import vo.Inventory;
 import vo.ItemGate;
 
 public class TestMain {
@@ -8,10 +9,11 @@ public class TestMain {
 	public static void main(String[] args) {
 		KeyCommand kc = new KeyCommand();
 		ItemGate itemGate = new ItemGate();
+		
 		itemGate.start();
 		//무한 반복시작
 		while(true) {
-		System.out.println("도시 이름 : "+"\t"+"날짜 : ");
+		System.out.println("도시 이름 : "+itemGate.inven.getCity_name()+"\t"+"날짜 : "+itemGate.inven.getDay());
 		System.out.println();
 		System.out.println("1. 상품구입");
 		System.out.println("2. 상품판매");
@@ -26,7 +28,7 @@ public class TestMain {
 			itemGate.numberOne();
 		}//상품구입종료
 		else if(con==2) {	//상품판매
-			
+			itemGate.numberTwo();
 		}
 		else if(con==3) {	//재고확인
 			

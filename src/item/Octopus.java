@@ -17,7 +17,7 @@ public class Octopus {
 		ptqvo.setName("문어");
 		
 		ptqvo.setType1("바다");
-		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
+		blue_quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
 	}
 	
 	public int S_plus() {	//선단시티
@@ -46,7 +46,8 @@ public class Octopus {
 		return quantyty;
 	}
 	
-	public void quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+	public void sundan_quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+
 		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
 		if(ptqvo.getGreen_Quantity()<0) {
 			ptqvo.setGreen_Quantity(0);
@@ -60,7 +61,43 @@ public class Octopus {
 		ptqvo.setSundan_Quantity(QuantityF+S_plus()-S_minus());
 		if(ptqvo.getSundan_Quantity()<0) {
 			ptqvo.setSundan_Quantity(0);
-		}		
+		}
+	}
+	
+	public void green_quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+
+		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
+		if(ptqvo.getGreen_Quantity()<0) {
+			ptqvo.setGreen_Quantity(0);
+		}
+		
+		ptqvo.setBlue_Quantity(QuantityF+B_plus()-B_minus());
+		if(ptqvo.getBlue_Quantity()<0) {
+			ptqvo.setBlue_Quantity(0);
+		}
+		
+		ptqvo.setSundan_Quantity(QuantityF+S_plus()-S_minus());
+		if(ptqvo.getSundan_Quantity()<0) {
+			ptqvo.setSundan_Quantity(0);
+		}
+	}
+	
+	public void blue_quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
+
+		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
+		if(ptqvo.getGreen_Quantity()<0) {
+			ptqvo.setGreen_Quantity(0);
+		}
+		
+		ptqvo.setBlue_Quantity(QuantityF+B_plus()-B_minus());
+		if(ptqvo.getBlue_Quantity()<0) {
+			ptqvo.setBlue_Quantity(0);
+		}
+		
+		ptqvo.setSundan_Quantity(QuantityF+S_plus()-S_minus());
+		if(ptqvo.getSundan_Quantity()<0) {
+			ptqvo.setSundan_Quantity(0);
+		}
 	}
 	
 	public void buyProcess(int quantity) {	//수량을 받아서 가격을 설정하는것

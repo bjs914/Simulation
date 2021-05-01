@@ -47,6 +47,8 @@ public class Green {
 		rice.first_setting();
 		salmon.first_setting();
 		salt.first_setting();
+		buyprice();
+		buyList();
 	}
 	
 	public void buyprice() {
@@ -85,7 +87,7 @@ public class Green {
 	
 	public void beef_list() {//10개만들기	
 		listC.item_name.add(beef.ptqvo.getName());
-		listC.quantity_collect.add(beef.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(beef.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(beef.cvo.getPrice());
 		listC.item_type1.add(beef.ptqvo.getType1());
 		listC.item_type2.add(beef.ptqvo.getType2());
@@ -95,7 +97,7 @@ public class Green {
 	
 	public void egg_list() {
 		listC.item_name.add(egg.ptqvo.getName());
-		listC.quantity_collect.add(egg.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(egg.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(egg.cvo.getPrice());
 		listC.item_type1.add(egg.ptqvo.getType1());
 		listC.item_type2.add(egg.ptqvo.getType2());
@@ -105,7 +107,7 @@ public class Green {
 	
 	public void gold_list() {
 		listC.item_name.add(gold.ptqvo.getName());
-		listC.quantity_collect.add(gold.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(gold.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(gold.cvo.getPrice());
 		listC.item_type1.add(gold.ptqvo.getType1());
 		listC.item_type2.add(gold.ptqvo.getType2());
@@ -115,7 +117,7 @@ public class Green {
 	
 	public void iron_list() {
 		listC.item_name.add(iron.ptqvo.getName());
-		listC.quantity_collect.add(iron.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(iron.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(iron.cvo.getPrice());
 		listC.item_type1.add(iron.ptqvo.getType1());
 		listC.item_type2.add(iron.ptqvo.getType2());
@@ -125,7 +127,7 @@ public class Green {
 	
 	public void mushroom_list() {
 		listC.item_name.add(mushroom.ptqvo.getName());
-		listC.quantity_collect.add(mushroom.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(mushroom.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(mushroom.cvo.getPrice());
 		listC.item_type1.add(mushroom.ptqvo.getType1());
 		listC.item_type2.add(mushroom.ptqvo.getType2());
@@ -135,7 +137,7 @@ public class Green {
 	
 	public void octopus_list() {
 		listC.item_name.add(octopus.ptqvo.getName());
-		listC.quantity_collect.add(octopus.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(octopus.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(octopus.cvo.getPrice());
 		listC.item_type1.add(octopus.ptqvo.getType1());
 		listC.item_type2.add(octopus.ptqvo.getType2());
@@ -145,7 +147,7 @@ public class Green {
 	
 	public void oyster_list() {
 		listC.item_name.add(oyster.ptqvo.getName());
-		listC.quantity_collect.add(oyster.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(oyster.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(oyster.cvo.getPrice());
 		listC.item_type1.add(oyster.ptqvo.getType1());
 		listC.item_type2.add(oyster.ptqvo.getType2());
@@ -155,7 +157,7 @@ public class Green {
 	
 	public void rice_list() {
 		listC.item_name.add(rice.ptqvo.getName());
-		listC.quantity_collect.add(rice.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(rice.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(rice.cvo.getPrice());
 		listC.item_type1.add(rice.ptqvo.getType1());
 		listC.item_type2.add(rice.ptqvo.getType2());
@@ -165,7 +167,7 @@ public class Green {
 	
 	public void salmon_list() {
 		listC.item_name.add(salmon.ptqvo.getName());
-		listC.quantity_collect.add(salmon.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(salmon.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(salmon.cvo.getPrice());
 		listC.item_type1.add(salmon.ptqvo.getType1());
 		listC.item_type2.add(salmon.ptqvo.getType2());
@@ -175,7 +177,7 @@ public class Green {
 	
 	public void salt_list() {
 		listC.item_name.add(salt.ptqvo.getName());
-		listC.quantity_collect.add(salt.ptqvo.getBlue_Quantity());
+		listC.quantity_collect.add(salt.ptqvo.getGreen_Quantity());
 		listC.price_collect.add(salt.cvo.getPrice());
 		listC.item_type1.add(salt.ptqvo.getType1());
 		listC.item_type2.add(salt.ptqvo.getType2());
