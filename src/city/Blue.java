@@ -71,35 +71,35 @@ public class Blue {
 	}
 	
 	public void buyQuantity() {
-		int bnum = listC.item_name.indexOf(beef.ptqvo.getName());
-		beef.blue_quantity(bnum);	//210501 수정 하는중
+		int num = listC.item_name.indexOf(beef.ptqvo.getName());
+		beef.blue_quantity(listC.quantity_collect.get(num));	//210501 수정 하는중
 		
-		int egnum = listC.item_name.indexOf(egg.ptqvo.getName());
-		egg.blue_quantity(egnum);
+		num = listC.item_name.indexOf(egg.ptqvo.getName());
+		egg.blue_quantity(listC.quantity_collect.get(num));
 		
-		int gnum = listC.item_name.indexOf(gold.ptqvo.getName());
-		gold.blue_quantity(gnum);
+		num = listC.item_name.indexOf(gold.ptqvo.getName());
+		gold.blue_quantity(listC.quantity_collect.get(num));
 		
-		int inum = listC.item_name.indexOf(iron.ptqvo.getName());
-		iron.blue_quantity(inum);
+		num = listC.item_name.indexOf(iron.ptqvo.getName());
+		iron.blue_quantity(listC.quantity_collect.get(num));
 		
-		int mnum = listC.item_name.indexOf(mushroom.ptqvo.getName());
-		mushroom.blue_quantity(mnum);
+		num = listC.item_name.indexOf(mushroom.ptqvo.getName());
+		mushroom.blue_quantity(listC.quantity_collect.get(num));
 		
-		int ocnum = listC.item_name.indexOf(octopus.ptqvo.getName());
-		octopus.blue_quantity(ocnum);
+		num = listC.item_name.indexOf(octopus.ptqvo.getName());
+		octopus.blue_quantity(listC.quantity_collect.get(num));
 		
-		int oynum = listC.item_name.indexOf(oyster.ptqvo.getName());
-		oyster.blue_quantity(oynum);
+		num = listC.item_name.indexOf(oyster.ptqvo.getName());
+		oyster.blue_quantity(listC.quantity_collect.get(num));
 		
-		int rnum = listC.item_name.indexOf(rice.ptqvo.getName());
-		rice.blue_quantity(rnum);
+		num = listC.item_name.indexOf(rice.ptqvo.getName());
+		rice.blue_quantity(listC.quantity_collect.get(num));
 		
-		int smnum= listC.item_name.indexOf(salmon.ptqvo.getName());
-		salmon.blue_quantity(smnum);
+		num = listC.item_name.indexOf(salmon.ptqvo.getName());
+		salmon.blue_quantity(listC.quantity_collect.get(num));
 		
-		int stnum = listC.item_name.indexOf(salt.ptqvo.getName());
-		salt.blue_quantity(stnum);
+		num = listC.item_name.indexOf(salt.ptqvo.getName());
+		salt.blue_quantity(listC.quantity_collect.get(num));
 	}
 	
 	

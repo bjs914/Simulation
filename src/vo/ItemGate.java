@@ -86,8 +86,9 @@ public class ItemGate {
 	}
 	
 	public void numberFour() {
-		//휴식 메소드
+		//휴식 메소드, 210501추가
 		inven.setDay(inven.getDay()+1);
+		cityList.time();
 	}
 	
 	public void numbereFive() {

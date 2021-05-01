@@ -34,7 +34,7 @@ public class TestMain {
 			
 		}
 		else if(con==4) {	//휴식
-			
+			itemGate.numberFour();
 		}
 		else if(con==5) {	//도시이동 시작
 //			vc.time.sc.nextLine();	//키 값 클리어

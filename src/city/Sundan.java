@@ -74,36 +74,36 @@ public class Sundan {
 		salt.sundan_quantity(salt.fQuantity);
 	}
 	
-	public void buyQuantity() {
-		int bnum = listC.item_name.indexOf(beef.ptqvo.getName());
-		beef.sundan_quantity(bnum);	//210501 수정 하는중
+	public void buyQuantity() {	//날짜바뀔때마다 변경 되는 메소드
+		int num = listC.item_name.indexOf(beef.ptqvo.getName());
+		beef.sundan_quantity(listC.quantity_collect.get(num));	//210501 수정 하는중
 		
-		int egnum = listC.item_name.indexOf(egg.ptqvo.getName());
-		egg.sundan_quantity(egnum);
+		num = listC.item_name.indexOf(egg.ptqvo.getName());
+		egg.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int gnum = listC.item_name.indexOf(gold.ptqvo.getName());
-		gold.sundan_quantity(gnum);
+		num = listC.item_name.indexOf(gold.ptqvo.getName());
+		gold.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int inum = listC.item_name.indexOf(iron.ptqvo.getName());
-		iron.sundan_quantity(inum);
+		num = listC.item_name.indexOf(iron.ptqvo.getName());
+		iron.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int mnum = listC.item_name.indexOf(mushroom.ptqvo.getName());
-		mushroom.sundan_quantity(mnum);
+		num = listC.item_name.indexOf(mushroom.ptqvo.getName());
+		mushroom.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int ocnum = listC.item_name.indexOf(octopus.ptqvo.getName());
-		octopus.sundan_quantity(ocnum);
+		num = listC.item_name.indexOf(octopus.ptqvo.getName());
+		octopus.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int oynum = listC.item_name.indexOf(oyster.ptqvo.getName());
-		oyster.sundan_quantity(oynum);
+		num = listC.item_name.indexOf(oyster.ptqvo.getName());
+		oyster.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int rnum = listC.item_name.indexOf(rice.ptqvo.getName());
-		rice.sundan_quantity(rnum);
+		num = listC.item_name.indexOf(rice.ptqvo.getName());
+		rice.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int smnum= listC.item_name.indexOf(salmon.ptqvo.getName());
-		salmon.sundan_quantity(smnum);
+		num = listC.item_name.indexOf(salmon.ptqvo.getName());
+		salmon.sundan_quantity(listC.quantity_collect.get(num));
 		
-		int stnum = listC.item_name.indexOf(salt.ptqvo.getName());
-		salt.sundan_quantity(stnum);
+		num = listC.item_name.indexOf(salt.ptqvo.getName());
+		salt.sundan_quantity(listC.quantity_collect.get(num));
 	}
 	
 	

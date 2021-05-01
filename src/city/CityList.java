@@ -15,8 +15,22 @@ public class CityList {
 	}
 	
 	public void cityList() {//날짜 변환 시, 실행
-		sundan.buyList();
-		blue.buyList();
-		green.buyList();
+		sundan.buyList();//바꿔야함
+		blue.buyList();//바꿔야하ㅑㅁ
+		green.buySetList();
+	}
+	
+	public void cityPrice() {
+		green.buyprice();
+	}
+	
+	public void cityQuantity() {
+		green.buyQuantity();
+	}
+	
+	public void time() {	//
+		cityQuantity();
+		cityPrice();
+		cityList();
 	}
 }
