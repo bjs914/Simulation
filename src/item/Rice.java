@@ -17,7 +17,7 @@ public class Rice {
 		
 		ptqvo.setType1("바다");
 		ptqvo.setType2("농지");
-		ptqvo.setType2("산지");
+		ptqvo.setType3("산지");
 		quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
 	}
 	
@@ -48,17 +48,17 @@ public class Rice {
 	}
 	
 	public void quantity(int QuantityF) {	//상점에 수량 세팅에 대한 함수
-		ptqvo.setGreen_Quantity(QuantityF+S_plus()-S_minus());
+		ptqvo.setGreen_Quantity(QuantityF+G_plus()-G_minus());
 		if(ptqvo.getGreen_Quantity()<0) {
 			ptqvo.setGreen_Quantity(0);
 		}
 		
-		ptqvo.setBlue_Quantity(QuantityF+G_plus()-G_minus());
+		ptqvo.setBlue_Quantity(QuantityF+B_plus()-B_minus());
 		if(ptqvo.getBlue_Quantity()<0) {
 			ptqvo.setBlue_Quantity(0);
 		}
 		
-		ptqvo.setSundan_Quantity(QuantityF+B_plus()-B_minus());
+		ptqvo.setSundan_Quantity(QuantityF+S_plus()-S_minus());
 		if(ptqvo.getSundan_Quantity()<0) {
 			ptqvo.setSundan_Quantity(0);
 		}		

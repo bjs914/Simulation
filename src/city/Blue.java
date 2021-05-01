@@ -32,10 +32,19 @@ public class Blue {
 	
 	
 	public void firstStart() {	//도시타입,도시이름 설정
-		city.setCity_name("선단시티");
-		city.setCity_type("산지");
+		city.setCity_name("블루시티");
+		city.setCity_type("바다");
 		beef.first_setting();
-		
+		beef.first_setting();
+		egg.first_setting();
+		gold.first_setting();
+		iron.first_setting();
+		mushroom.first_setting();
+		octopus.first_setting();
+		oyster.first_setting();
+		rice.first_setting();
+		salmon.first_setting();
+		salt.first_setting();		
 	}
 
 	public void buyprice() {
