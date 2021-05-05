@@ -1,5 +1,6 @@
 package vo;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Inventory {
@@ -7,7 +8,15 @@ public class Inventory {
 	String city_type;
 	int day;
 	public Random rd = new Random();
-		
+	
+	//내가 가지고 있는 상품 리스트
+	public ArrayList<String> item_name = new ArrayList<String>();
+	public ArrayList<Integer> quantity_collect = new ArrayList<Integer>();
+	public ArrayList<Double> price_collect = new ArrayList<Double>();
+	public ArrayList<String> item_type1 = new ArrayList<String>();
+	public ArrayList<String> item_type2 = new ArrayList<String>();
+	public ArrayList<String> item_type3 = new ArrayList<String>();	
+	
 	public String getCity_name() {
 		return city_name;
 	}

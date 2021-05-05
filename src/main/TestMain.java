@@ -38,39 +38,7 @@ public class TestMain {
 		}
 		else if(con==5) {	//도시이동 시작
 			itemGate.numbereFive();
-//			vc.time.sc.nextLine();	//키 값 클리어
-//			if(vc.time.getCity().equals("그린시티")) {	//도시이동 시작지점이 그린시티일때 나오는 뷰
-//				System.out.println("1. 블루시티 (2일)\t2. 선단시티 (1일)");
-//			}
-//				else if(vc.time.getCity().equals("블루시티")) {	//도시이동 시작지점이 블루시티일때 나오는 뷰
-//					System.out.println("1. 그린시티(2일)\t2. 선단시티(5일)");
-//				}
-//				else if(vc.time.getCity().equals("선단시티")) {	//도시이동 시작지점이 선단시티일때 나오는 뷰
-//					System.out.println("1. 블루시티(5일)\t2. 그린시티(1일)");
-//				}
-//			
-//				int move=vc.time.sc.nextInt();					//도시 이동을 위한 입력키
-//				
-//				if(vc.time.getCity().equals("그린시티") && move==1) {	//그린시티에서 출발하는 로직 
-//					vc.numberFive(vc.time.getCity(),1);	//블루시티로 이동
-//				}
-//				else if(move==2) {	
-//					vc.numberFive(vc.time.getCity(), 2);	//선단시티로 이동
-//				}	//그린시티에서 출발하는 로직 종료
-//				
-//				else if(vc.time.getCity().equals("블루시티") && move==1) {	//블루시티에서 출발하는 로직
-//					vc.numberFive(vc.time.getCity(),1);	// 그린시티로 이동
-//				}
-//				else if(vc.time.getCity().equals("블루시티") && move==2) {
-//					vc.numberFive(vc.time.getCity(),2);	//선단시티로 이동
-//				}//블루시티에서 출발하는 로직 종료
-//				else if(vc.time.getCity().equals("선단시티") && move==1) {	//선단시티에서 출발하는 로직
-//					vc.numberFive(vc.time.getCity(),1);	//블루시티로 이동
-//				}
-//				else if(vc.time.getCity().equals("선단시티") && move==2) {
-//					vc.numberFive(vc.time.getCity(),2);	//그린시티로 이동
-//				}//선단시티에서  출발하는 로직 종료
-			}//도시 이동 종료
+		}//도시 이동 종료
 		else if(con==6) {	//프로그램 종료 시작
 			System.out.println("게임이 종료되었습니다");
 			break;
