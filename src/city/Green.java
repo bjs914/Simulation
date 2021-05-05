@@ -48,6 +48,19 @@ public class Green {
 		buyList();
 	}
 	
+	public void buyprice() {
+		beef.buyProcess(beef.ptqvo.getGreen_Quantity());	//이거 열개들어와야함
+		egg.buyProcess(egg.ptqvo.getGreen_Quantity());
+		gold.buyProcess(gold.ptqvo.getGreen_Quantity());
+		iron.buyProcess(iron.ptqvo.getGreen_Quantity());
+		mushroom.buyProcess(mushroom.ptqvo.getGreen_Quantity());
+		octopus.buyProcess(octopus.ptqvo.getGreen_Quantity());
+		oyster.buyProcess(oyster.ptqvo.getGreen_Quantity());
+		rice.buyProcess(rice.ptqvo.getGreen_Quantity());
+		salmon.buyProcess(salmon.ptqvo.getGreen_Quantity());
+		salt.buyProcess(salt.ptqvo.getGreen_Quantity());
+	}
+	
 	public void firstQuantity() {//210501 추가 및 수정
 		beef.green_quantity(beef.fQuantity);
 		egg.green_quantity(egg.fQuantity);
@@ -91,19 +104,6 @@ public class Green {
 		
 		num = listC.item_name.indexOf(salt.ptqvo.getName());
 		salt.green_quantity(listC.quantity_collect.get(num));
-	}
-	
-	public void buyprice() {
-		beef.buyProcess(beef.ptqvo.getGreen_Quantity());	//이거 열개들어와야함
-		egg.buyProcess(egg.ptqvo.getGreen_Quantity());
-		gold.buyProcess(gold.ptqvo.getGreen_Quantity());
-		iron.buyProcess(iron.ptqvo.getGreen_Quantity());
-		mushroom.buyProcess(mushroom.ptqvo.getGreen_Quantity());
-		octopus.buyProcess(octopus.ptqvo.getGreen_Quantity());
-		oyster.buyProcess(oyster.ptqvo.getGreen_Quantity());
-		rice.buyProcess(rice.ptqvo.getGreen_Quantity());
-		salmon.buyProcess(salmon.ptqvo.getGreen_Quantity());
-		salt.buyProcess(salt.ptqvo.getGreen_Quantity());
 	}
 	
 	
