@@ -30,7 +30,6 @@ public class Blue {
 		city.setCity_name("블루시티");
 		city.setCity_type("바다");
 		beef.first_setting();
-		beef.first_setting();
 		egg.first_setting();
 		gold.first_setting();
 		iron.first_setting();
@@ -40,6 +39,7 @@ public class Blue {
 		rice.first_setting();
 		salmon.first_setting();
 		salt.first_setting();	
+		firstQuantity();
 		buyprice();
 		buyList();
 	}
@@ -120,6 +120,19 @@ public class Blue {
 		salt_list();
 	}
 	
+	public void buySetList() {
+		beef_setList();
+		egg_setList();
+		gold_setList();
+		iron_setList();
+		mushroom_setList();
+		octopus_setList();
+		oyster_setList();
+		rice_setList();
+		salmon_setList();
+		salt_setList();
+	}
+	
 	
 	//상품 리스트 시작
 	public void beef_list() {//10개만들기	
@@ -132,6 +145,13 @@ public class Blue {
 		//리스트화 지정 전 세팅		
 	}
 	
+	public void beef_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(beef.ptqvo.getName());
+		listC.quantity_collect.set(num, beef.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, beef.cvo.getPrice());
+		//판매가격 넣어야함
+	}
+	
 	public void egg_list() {
 		listC.item_name.add(egg.ptqvo.getName());
 		listC.quantity_collect.add(egg.ptqvo.getBlue_Quantity());
@@ -140,6 +160,13 @@ public class Blue {
 		listC.item_type2.add(egg.ptqvo.getType2());
 		listC.item_type3.add(egg.ptqvo.getType3());
 		//리스트화 지정 전 세팅
+	}
+	
+	public void egg_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(egg.ptqvo.getName());
+		listC.quantity_collect.set(num, egg.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, egg.cvo.getPrice());
+		//판매가격 넣어야함
 	}
 	
 	public void gold_list() {
@@ -152,6 +179,13 @@ public class Blue {
 		//리스트화 지정 전 세팅
 	}
 	
+	public void gold_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(gold.ptqvo.getName());
+		listC.quantity_collect.set(num, gold.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, gold.cvo.getPrice());
+		//판매가격 넣어야함
+	}
+	
 	public void iron_list() {
 		listC.item_name.add(iron.ptqvo.getName());
 		listC.quantity_collect.add(iron.ptqvo.getBlue_Quantity());
@@ -160,6 +194,13 @@ public class Blue {
 		listC.item_type2.add(iron.ptqvo.getType2());
 		listC.item_type3.add(iron.ptqvo.getType3());
 		//리스트화 지정 전 세팅
+	}
+	
+	public void iron_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(iron.ptqvo.getName());
+		listC.quantity_collect.set(num, iron.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, iron.cvo.getPrice());
+		//판매가격 넣어야함
 	}
 	
 	public void mushroom_list() {
@@ -172,6 +213,13 @@ public class Blue {
 		//리스트화 지정 전 세팅
 	}
 	
+	public void mushroom_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(mushroom.ptqvo.getName());
+		listC.quantity_collect.set(num, mushroom.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, mushroom.cvo.getPrice());
+		//판매가격 넣어야함
+	}
+	
 	public void octopus_list() {
 		listC.item_name.add(octopus.ptqvo.getName());
 		listC.quantity_collect.add(octopus.ptqvo.getBlue_Quantity());
@@ -180,6 +228,13 @@ public class Blue {
 		listC.item_type2.add(octopus.ptqvo.getType2());
 		listC.item_type3.add(octopus.ptqvo.getType3());
 		//리스트화 지정 전 세팅
+	}
+	
+	public void octopus_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(octopus.ptqvo.getName());
+		listC.quantity_collect.set(num, octopus.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, octopus.cvo.getPrice());
+		//판매가격 넣어야함
 	}
 	
 	public void oyster_list() {
@@ -192,6 +247,13 @@ public class Blue {
 		//리스트화 지정 전 세팅
 	}
 	
+	public void oyster_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(oyster.ptqvo.getName());
+		listC.quantity_collect.set(num, oyster.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, oyster.cvo.getPrice());
+		//판매가격 넣어야함
+	}
+	
 	public void rice_list() {
 		listC.item_name.add(rice.ptqvo.getName());
 		listC.quantity_collect.add(rice.ptqvo.getBlue_Quantity());
@@ -200,6 +262,13 @@ public class Blue {
 		listC.item_type2.add(rice.ptqvo.getType2());
 		listC.item_type3.add(rice.ptqvo.getType3());
 		//리스트화 지정 전 세팅
+	}
+	
+	public void rice_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(rice.ptqvo.getName());
+		listC.quantity_collect.set(num, rice.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, rice.cvo.getPrice());
+		//판매가격 넣어야함
 	}
 	
 	public void salmon_list() {
@@ -212,6 +281,13 @@ public class Blue {
 		//리스트화 지정 전 세팅
 	}
 	
+	public void salmon_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(salmon.ptqvo.getName());
+		listC.quantity_collect.set(num, salmon.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, salmon.cvo.getPrice());
+		//판매가격 넣어야함
+	}
+	
 	public void salt_list() {
 		listC.item_name.add(salt.ptqvo.getName());
 		listC.quantity_collect.add(salt.ptqvo.getBlue_Quantity());
@@ -220,5 +296,12 @@ public class Blue {
 		listC.item_type2.add(salt.ptqvo.getType2());
 		listC.item_type3.add(salt.ptqvo.getType3());
 		//리스트화 지정 전 세팅
+	}
+	
+	public void salt_setList() {	//날짜 변경 시, 상점 판매 목록 변경
+		int num = listC.item_name.indexOf(salt.ptqvo.getName());
+		listC.quantity_collect.set(num, salt.ptqvo.getGreen_Quantity());	//num자리에 잇는 것을 beef이후에 것으로 변경(override)하는 의미
+		listC.price_collect.set(num, salt.cvo.getPrice());
+		//판매가격 넣어야함
 	}
 }

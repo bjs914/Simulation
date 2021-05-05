@@ -13,6 +13,7 @@ public class ItemGate {
 		int cityPick = inven.rd.nextInt(3);
 		inven.setDay(1);
 		
+		
 		if(cityPick==0) {	//선단시티에 대한 것
 			inven.setCity_name(cityList.sundan.city.getCity_name());
 			inven.setCity_type(cityList.sundan.city.getCity_type());

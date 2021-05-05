@@ -69,25 +69,25 @@ public class Beef {
 	}
 	public void buyProcess(int quantity) {	//수량을 받아서 가격을 설정하는것
 		if(quantity<=140) {
-			cvo.setPrice(beefPrice*((1-30/100)));
+			cvo.setPrice(beefPrice*((1.0-30.0/100)));
 		}
 		else if(quantity>140 && quantity<=160) {
-			cvo.setPrice(beefPrice*((1-20/100)));
+			cvo.setPrice(beefPrice*((1.0-20.0/100)));
 		}
 		else if(quantity>160 && quantity<=180) {
-			cvo.setPrice(beefPrice*((1-10/100)));
+			cvo.setPrice(beefPrice*((1.0-10.0/100)));
 		}
 		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(beefPrice);
 		}
 		else if(quantity>220 && quantity<=240) {
-			cvo.setPrice(beefPrice*((1+10/100)));
+			cvo.setPrice(beefPrice*((1.0+10.0/100)));
 		}
 		else if(quantity>240 && quantity<=260) {
-			cvo.setPrice(beefPrice*((1+20/100)));
+			cvo.setPrice(beefPrice*((1.0+20.0/100)));
 		}
 		else {
-			cvo.setPrice(beefPrice*((1+30/100)));
+			cvo.setPrice(beefPrice*((1.0+30.0/100)));
 		}
 	}
 }

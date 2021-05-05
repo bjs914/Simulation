@@ -15,9 +15,7 @@ public class Gold {
 	
 	public void first_setting() {
 		ptqvo.setName("금광석");
-		
 		ptqvo.setType1("산지");
-		sundan_quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
 	}
 	
 	public int S_plus() {	//선단시티
@@ -102,25 +100,25 @@ public class Gold {
 	
 	public void buyProcess(int quantity) {
 		if(quantity<=140) {
-			cvo.setPrice(goldPrice*((1-30/100)));
+			cvo.setPrice(goldPrice*((1.0-30.0/100)));
 		}
 		else if(quantity>140 && quantity<=160) {
-			cvo.setPrice(goldPrice*((1-20/100)));
+			cvo.setPrice(goldPrice*((1.0-20.0/100)));
 		}
 		else if(quantity>160 && quantity<=180) {
-			cvo.setPrice(goldPrice*((1-10/100)));
+			cvo.setPrice(goldPrice*((1.0-10.0/100)));
 		}
 		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(goldPrice);
 		}
 		else if(quantity>220 && quantity<=240) {
-			cvo.setPrice(goldPrice*((1+10/100)));
+			cvo.setPrice(goldPrice*((1.0+10.0/100)));
 		}
 		else if(quantity>240 && quantity<=260) {
-			cvo.setPrice(goldPrice*((1+20/100)));
+			cvo.setPrice(goldPrice*((1.0+20.0/100)));
 		}
 		else {
-			cvo.setPrice(goldPrice*((1+30/100)));
+			cvo.setPrice(goldPrice*((1.0+30.0/100)));
 		}
 	}
 }

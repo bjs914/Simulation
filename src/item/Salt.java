@@ -14,11 +14,8 @@ public class Salt {
 	
 	public void first_setting() {
 		ptqvo.setName("소금");
-		
 		ptqvo.setType1("바다");
 		ptqvo.setType2("농지");
-		blue_quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
-		green_quantity(fQuantity);
 	}
 	
 	public int S_plus() {	//선단시티
@@ -103,25 +100,25 @@ public class Salt {
 	
 	public void buyProcess(int quantity) {	//수량을 받아서 가격을 설정하는것
 		if(quantity<=140) {
-			cvo.setPrice(saltPrice*((1-30/100)));
+			cvo.setPrice(saltPrice*((1.0-30.0/100)));
 		}
 		else if(quantity>140 && quantity<=160) {
-			cvo.setPrice(saltPrice*((1-20/100)));
+			cvo.setPrice(saltPrice*((1.0-20.0/100)));
 		}
 		else if(quantity>160 && quantity<=180) {
-			cvo.setPrice(saltPrice*((1-10/100)));
+			cvo.setPrice(saltPrice*((1.0-10.0/100)));
 		}
 		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(saltPrice);
 		}
 		else if(quantity>220 && quantity<=240) {
-			cvo.setPrice(saltPrice*((1+10/100)));
+			cvo.setPrice(saltPrice*((1.0+10.0/100)));
 		}
 		else if(quantity>240 && quantity<=260) {
-			cvo.setPrice(saltPrice*((1+20/100)));
+			cvo.setPrice(saltPrice*((1.0+20.0/100)));
 		}
 		else {
-			cvo.setPrice(saltPrice*((1+30/100)));
+			cvo.setPrice(saltPrice*((1.0+30.0/100)));
 		}
 	}
 }

@@ -34,7 +34,6 @@ public class Green {
 		city.setCity_name("그린시티");
 		city.setCity_type("농지");
 		beef.first_setting();
-		beef.first_setting();
 		egg.first_setting();
 		gold.first_setting();
 		iron.first_setting();
@@ -44,6 +43,7 @@ public class Green {
 		rice.first_setting();
 		salmon.first_setting();
 		salt.first_setting();
+		firstQuantity();
 		buyprice();
 		buyList();
 	}

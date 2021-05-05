@@ -15,11 +15,8 @@ public class Mushroom {
 	
 	public void first_setting() {
 		ptqvo.setName("버섯");
-		
 		ptqvo.setType1("농지");
 		ptqvo.setType2("산지");
-		green_quantity(fQuantity);	//최초 실행시 물건 수량에 대한 초기값 지정
-		sundan_quantity(fQuantity);
 	}
 	
 	public int S_plus() {	//선단시티
@@ -104,25 +101,25 @@ public class Mushroom {
 	
 	public void buyProcess(int quantity) {	//수량을 받아서 가격을 설정하는것
 		if(quantity<=140) {
-			cvo.setPrice(mushPrice*((1-30/100)));
+			cvo.setPrice(mushPrice*((1.0-30.0/100)));
 		}
 		else if(quantity>140 && quantity<=160) {
-			cvo.setPrice(mushPrice*((1-20/100)));
+			cvo.setPrice(mushPrice*((1.0-20.0/100)));
 		}
 		else if(quantity>160 && quantity<=180) {
-			cvo.setPrice(mushPrice*((1-10/100)));
+			cvo.setPrice(mushPrice*((1.0-10.0/100)));
 		}
 		else if(quantity>180 && quantity<=220) {
 			cvo.setPrice(mushPrice);
 		}
 		else if(quantity>220 && quantity<=240) {
-			cvo.setPrice(mushPrice*((1+10/100)));
+			cvo.setPrice(mushPrice*((1.0+10.0/100)));
 		}
 		else if(quantity>240 && quantity<=260) {
-			cvo.setPrice(mushPrice*((1+20/100)));
+			cvo.setPrice(mushPrice*((1.0+20.0/100)));
 		}
 		else {
-			cvo.setPrice(mushPrice*((1+30/100)));
+			cvo.setPrice(mushPrice*((1.0+30.0/100)));
 		}
 	}
 }

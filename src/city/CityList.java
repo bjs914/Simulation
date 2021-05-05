@@ -15,20 +15,24 @@ public class CityList {
 	}
 	
 	public void cityList() {//날짜 변환 시, 실행
-		sundan.buyList();//바꿔야함
-		blue.buyList();//바꿔야하ㅑㅁ
+		sundan.buySetList();//SetList로 바꿔야함
+		blue.buySetList();//SetList로 바꿔야함
 		green.buySetList();
 	}
 	
 	public void cityPrice() {
+		blue.buyprice();
 		green.buyprice();
+		sundan.buyprice();
 	}
 	
 	public void cityQuantity() {
 		green.buyQuantity();
+		blue.buyQuantity();
+		sundan.buyQuantity();
 	}
 	
-	public void time() {	//
+	public void time() {	//이 클래스에 있는 메소드를 묶어서 한번에 활용하기 위한 것
 		cityQuantity();
 		cityPrice();
 		cityList();
