@@ -1,12 +1,14 @@
 package vo;
 
 import city.CityList;
+import commander.KeyCommand;
 
 
 public class ItemGate {
 	PTQ_VO ftqvo=new PTQ_VO();
 	CityList cityList =new CityList();
 	public Inventory inven = new Inventory();
+	KeyCommand keyCommand = new KeyCommand();
 	
 	public void start() {	//최초 한번실행
 		cityList.fisrtStart();
@@ -92,7 +94,68 @@ public class ItemGate {
 		cityList.time();
 	}
 	
-	public void numbereFive() {
-		
+	public void numbereFive() {//210505 추가
+		System.out.println("이동할 마을을 선택해주세요.");
+		if(inven.getCity_name().equals(cityList.green.city.getCity_name())) {
+			System.out.println("1. 블루시티 (2일)\t 2. 선단시티 (3일)");
+			String choice=keyCommand.sc.next();
+			
+			if(inven.getCity_name().equals(cityList.green.city.getCity_name()) && choice.equals("1") ) {
+				inven.setCity_name(cityList.blue.city.getCity_name());
+				for (int i=0; i<2; i++) {	//i의 의미 : 그린시티->블루시티 까지의 일수 (즉, 변경되는 최대날짜까지의 로직 반복 횟수)
+					inven.setDay(inven.getDay()+1);
+					cityList.time();
+				}			
+			}
+			else if(inven.getCity_name().equals(cityList.green.city.getCity_name()) && choice.equals("2") ) {
+				inven.setCity_name(cityList.sundan.city.getCity_name());
+				for (int i=0;i<4;i++) {
+					inven.setDay(inven.getDay()+1);
+					cityList.time();				
+				}
+			}
+		}
+		else if(inven.getCity_name().equals(cityList.blue.city.getCity_name())) {
+			System.out.println("1. 선단시티 (5일)\t 2. 그린시티 (3일)");
+			String choice=keyCommand.sc.next();
+			
+			if(inven.getCity_name().equals(cityList.blue.city.getCity_name()) && choice.equals("1") ) {
+				inven.setCity_name(cityList.sundan.city.getCity_name());
+				for (int i=0; i<5; i++) {
+					inven.setDay(inven.getDay()+1);
+					cityList.time();
+				}
+			}
+			else if(inven.getCity_name().equals(cityList.blue.city.getCity_name()) && choice.equals("2") ) {
+				inven.setCity_name(cityList.green.city.getCity_name());
+				for (int i=0;i<3;i++) {
+					inven.setDay(inven.getDay()+1);
+					cityList.time();
+				}
+			}
+						
+		}
+		else if(inven.getCity_name().equals(cityList.sundan.city.getCity_name())) {
+			System.out.println("1. 블루시티 (2일)\t 2. 그린시티 (4일)");
+			String choice=keyCommand.sc.next();
+			
+			if(inven.getCity_name().equals(cityList.sundan.city.getCity_name()) && choice.equals("1")) {
+				inven.setCity_name(cityList.blue.city.getCity_name());
+				for (int i=0;i<3;i++) {
+					inven.setDay(inven.getDay()+1);
+					cityList.time();
+				}
+			}
+			else if(inven.getCity_name().equals(cityList.sundan.city.getCity_name()) && choice.equals("2")) {
+				inven.setCity_name(cityList.green.city.getCity_name());
+				for (int i=0;i<4;i++) {
+					inven.setDay(inven.getDay()+1);
+					cityList.time();
+				}
+			}
+		}	
+		else {
+			System.out.println("잘못 눌렀습니다.");
+		}
 	}
 }

@@ -37,6 +37,7 @@ public class TestMain {
 			itemGate.numberFour();
 		}
 		else if(con==5) {	//도시이동 시작
+			itemGate.numbereFive();
 //			vc.time.sc.nextLine();	//키 값 클리어
 //			if(vc.time.getCity().equals("그린시티")) {	//도시이동 시작지점이 그린시티일때 나오는 뷰
 //				System.out.println("1. 블루시티 (2일)\t2. 선단시티 (1일)");
